@@ -2,7 +2,7 @@
 
 **Stage 1 checkpoint: layers 1–3. Not the finished world.**
 
-[Open World](https://anttiluode.github.io/World/) · [Source inspection / reuse decisions](docs/SOURCE_NOTES.md) · [Measured shader results](results/gpu-egl.json)
+[Pages address — pending one-time setup](https://anttiluode.github.io/World/) · [Source inspection / reuse decisions](docs/SOURCE_NOTES.md) · [Measured shader results](results/gpu-egl.json)
 
 Sound excites a field of oscillators. The field mobilizes sediment. Sediment travels, settles and compacts; the resulting terrain and compaction change the next force update. This is the loop implemented here.
 
@@ -11,6 +11,14 @@ Sound excites a field of oscillators. The field mobilizes sediment. Sediment tra
 ![Stage-one material field, rendered through EGL from the HTML shaders after 1600 steps](results/stage1-egl.png)
 
 The image above is an **EGL render of the actual shader sources**, not a browser screenshot and not generated art. What I see at this checkpoint is a low-relief eroded basin with exposed ridges and sediment accumulation. It does **not yet meet the full CrystalMoon-class visual ambition**. This is the point at which the user asked development to stop and inspect the foundation.
+
+## Deployment status
+
+Source is committed. The first Actions run passed **8/8 Node tests**, then failed at `configure-pages`: **“Create Pages site failed. Resource not accessible by integration.”** Pages is not enabled for this new repository; the workflow token cannot perform that initial administrative action.
+
+Repository owner: open [Settings → Pages](https://github.com/anttiluode/World/settings/pages), select **GitHub Actions** under **Build and deployment → Source**, then [re-run the failed workflow](https://github.com/anttiluode/World/actions/runs/43400898789). The page address above is the intended address, **not a verified live deployment**. No broader token or new credential is requested.
+
+Meanwhile, download `index.html` from this repository and open it locally for generated weather and song input.
 
 ## Run it
 
