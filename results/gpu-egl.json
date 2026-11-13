@@ -1,0 +1,113 @@
+{
+  "backend": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "method": "Exact HTML shader bodies, GLSL ES 300 version/precision translated to desktop GLSL 330; EGL, not a browser.",
+  "grid": 64,
+  "checks": [
+    {
+      "name": "Deterministic feature replay",
+      "pass": true,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    {
+      "name": "Finite nonnegative material and finite forces",
+      "pass": true,
+      "minimum": 0.0
+    },
+    {
+      "name": "Sediment mass conservation",
+      "pass": true,
+      "initial": 414.03009003953366,
+      "final": 414.0300852542081,
+      "relativeError": 1.1557917411260883e-08
+    },
+    {
+      "name": "Different weather changes material",
+      "pass": true,
+      "mean": 0.017317882872780098,
+      "max": 0.10621991939842701
+    },
+    {
+      "name": "Seed changes evolved matter and forces",
+      "pass": true,
+      "material": {
+        "mean": 0.03458445970193446,
+        "max": 0.20863125077448785
+      },
+      "force": {
+        "mean": 0.04013401191643789,
+        "max": 0.3525901325047016
+      }
+    },
+    {
+      "name": "Removing forces changes deposition",
+      "pass": true,
+      "mean": 0.03573279807208683,
+      "max": 0.18638235330581665
+    },
+    {
+      "name": "Frozen matter stays exact",
+      "pass": true,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    {
+      "name": "Frozen forces stay exact",
+      "pass": true,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    {
+      "name": "Killed forces are zero",
+      "pass": true
+    },
+    {
+      "name": "Rock effects propagate beyond brush radius",
+      "pass": true,
+      "material": {
+        "mean": 1.2823622827833406e-05,
+        "max": 0.0026895254850387573
+      },
+      "force": {
+        "mean": 1.4230266739252074e-06,
+        "max": 0.00017026811838150024
+      },
+      "brushRadius": 0.1,
+      "measuredBeyond": 0.12
+    },
+    {
+      "name": "Matched surface with different past compaction has different future transport",
+      "pass": true,
+      "past": {
+        "mean": 0.00942720617786108,
+        "max": 0.1295834630727768
+      },
+      "matched": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "future": {
+        "mean": 0.0009867460950667437,
+        "max": 0.01933739334344864
+      }
+    },
+    {
+      "name": "Organ affects matter",
+      "pass": true,
+      "mean": 0.008311272589782367,
+      "max": 0.09750090539455414
+    },
+    {
+      "name": "Production grid stays finite after 1600 steps",
+      "pass": true
+    }
+  ],
+  "productionGrid": {
+    "grid": 192,
+    "steps": 1600,
+    "elapsedSeconds": 9.405092215999957
+  },
+  "elapsedSeconds": 21.07645583152771,
+  "browser": "Preview browser did not provide the required WebGL2/float setup; not verified.",
+  "rtx3060": "Not available; not measured."
+}
